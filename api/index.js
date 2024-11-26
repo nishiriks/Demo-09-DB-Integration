@@ -1,10 +1,11 @@
-require('dotenv').config();
-const { sql } = require('@vercel/postgres');
 const express = require('express')
 const app = express();
 
 // enable middleware to parse body of Content-type: application/json
 app.use(express.json());
+
+const { sql } = require('@vercel/postgres');
+require('dotenv').config();
 
 const PORT = 4000;
 
